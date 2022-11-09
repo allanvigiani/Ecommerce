@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.shortcuts import render
-
-def home(request):
-    return render(request, 'home/index.html')
+from eletronicos import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', home),
+    path('', views.home, name='home'),
+    path('login', views.login, name='login'),
 ]

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="w-screen flex items-center justify-center bg-gray-100">
+    <div class="w-80">
+        <h2 class="text-lg font-bold text-center mb-4">Login</h2>
+
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,19 +1,27 @@
 from django.db import models
 
 class Cliente(models.Model):
-    nome = models.CharField(max_length=30)
-    sobrenome = models.CharField(max_length=30)
-    email = models.EmailField()
-    dt_nascimento = models.DateField()
-    estado = models.CharField(max_length=30)
-    cidade  = models.CharField(max_length=60)
-    encedereco = models.CharField(max_length=60)
+    nome = models.CharField(max_length=30, verbose_name="Nome")
+    email = models.EmailField(verbose_name="Email")
+    cpf = models.IntegerField(verbose_name="CPF")
+    dt_nascimento = models.DateField(verbose_name="Data de Nascimento")
+    uf = models.CharField(max_length=2, verbose_name="UF")
+    cidade  = models.CharField(max_length=60, verbose_name="Cidade")
+    endereco = models.CharField(max_length=60, verbose_name="Endereco")
+    login = models.CharField(max_length=20, verbose_name="Login")
+    senha = models.CharField(max_length=200, verbose_name="Senha")
 
     class Meta:
         ordering = ('nome',)
 
     def __str__(self):
         return self.nome
+
+class Usuario(models.Model):
+    tipo = models.IntegerField()
+    dt_cadastro = models.DateField()
+    administrativo = models.BooleanField()
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
 
 class Produto(models.Model):
     nome = models.CharField(max_length=60)

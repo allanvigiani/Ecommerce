@@ -1,675 +1,607 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 {% load static %}
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<!-- banner promocao -->
+<div>
+    <div class="container mx-auto px-4 mb-8">
+        <img src="{% static '/img/banner.jpg' %}" alt="Banner promocional" class="object-cover">
+    </div>
+</div>
+<!-- banner promocao -->
 
-<body class="bg-gray-100">
-
-    <header>
+<!-- Produtos -->
+<div>
+    <div class="container mx-auto px-4">
         <div>
-            <div class="container mx-auto h-24 flex items-center justify-between">
-                <div class="font-black">
-                    LOGOTIPO
+            <h3 class="text-center text-2xl text-gray-800 font-semibold mb-8"> <span
+                    class="underline decoration-sky-600">Nossos produtos disponíveis</span></h3>
+
+            <div class="grid grid-cols-4 gap-4 mb-4">
+
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center">
-                    <input type="text" placeholder="Digite um produto..." class="rounded-sm"><a href=""><svg
-                            class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg></a>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <ul class="flex items-center">
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600">Ajuda</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600 ml-2">Carrinho</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600 ml-2">Login</a>
-                        </li>
-                    </ul>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-md shadow-lg">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
+                        <div>
+                            <ul class="flex justify-end mr-2 pt-2">
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                        class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                        </path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                                        class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512">
+                                        <path fill="currentColor"
+                                            d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                                        </path>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="w-full" src="" alt="Imagem do produto">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Titulo do produto</div>
+                            <p class="text-gray-700 text-base">
+                                Descricao do produto
+                            </p>
+                        </div>
+                        <div class="text-center mb-2">
+                            <button
+                                class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                                &nbsp; Colocar no carrinho
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <!-- banner promocao -->
-    <div>
-        <div class="container mx-auto px-4 mb-8">
-            <img src="{% static '/img/banner.jpg' %}" alt="Banner promocional" class="object-cover">
         </div>
     </div>
-    <!-- banner promocao -->
+</div>
+<!-- Produtos -->
 
-    <!-- Produtos -->
-    <div>
-        <div class="container mx-auto px-4">
-            <div>
-                <h3 class="text-center text-2xl text-gray-800 font-semibold mb-8"> <span
-                        class="underline decoration-sky-600">Nossos produtos disponíveis</span></h3>
-
-                <div class="grid grid-cols-4 gap-4 mb-4">
-
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-md shadow-lg">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
-                            <div>
-                                <ul class="flex justify-end mr-2 pt-2">
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
-                                            class="w-4 text-yellow-500 mr-1" role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                    <li>
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
-                                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 576 512">
-                                            <path fill="currentColor"
-                                                d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
-                                            </path>
-                                        </svg>
-                                    </li>
-                                </ul>
-                            </div>
-                            <img class="w-full" src="" alt="Imagem do produto">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Titulo do produto</div>
-                                <p class="text-gray-700 text-base">
-                                    Descricao do produto
-                                </p>
-                            </div>
-                            <div class="text-center mb-2">
-                                <button
-                                    class="inline-flex items-center text-white bg-sky-600 font-medium px-2 py-2 rounded">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                        </path>
-                                    </svg>
-                                    &nbsp; Colocar no carrinho
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Produtos -->
-
-    <!-- Footer -->
-    <footer>
-        <div>
-            <div class="container mx-auto h-24 flex items-center justify-between">
-                <div class="font-black">
-                    LOGOTIPO
-                </div>
-                <div class="flex items-center">
-                    <img src="{% static '/img/certificado.png' %}" alt="Certificado site seguro" class="w-40 h-20">
-                </div>
-                <div>
-                    <ul class="flex items-center">
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600"><i class="fa fa-twitter" style="font-size:36px"></i></a>
-                        </li>
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600 ml-4"><i class="fa fa-facebook" style="font-size:36px"></i></a>
-                        </li>
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600 ml-4"><i class="fa fa-instagram" style="font-size:36px"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer -->
-
-</body>
-
-</html>
+{% endblock content %}
