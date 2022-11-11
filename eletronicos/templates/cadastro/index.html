@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="w-screen flex items-center justify-center bg-gray-100 m-4">
+    <div class="w-80">
+        <h2 class="text-lg font-bold text-center mb-4">Cadastro</h2>
+
+        <div class="bg-white shadow-md rounded-md p-6 space-y-4">
+            <form method="post" action="{% url 'cadastro' %}">
+                {% csrf_token %}
+                <div>
+                    <label for="nome" class="block text-sm text-gray-800 mb-1">Nome</label>
+                    <input id="nome" type="text" name="nome"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.nome }}
+                <div>
+                    <label for="emai" class="block text-sm text-gray-800 mb-1">E-mail</label>
+                    <input id="email" type="email" name="email"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.email }}
+                <div>
+                    <label for="cpf" class="block text-sm text-gray-800 mb-1">CPF</label>
+                    <input id="cpf" type="integer" name="cpf"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.cpf }}
+                <div>
+                    <label for="dt_nascimento" class="block text-sm text-gray-800 mb-1">Data de Nascimento</label>
+                    <input id="dt_nascimento" type="date" name="dt_nascimento"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.dt_nascimento }}
+                <div>
+                    <label for="uf" class="block text-sm text-gray-800 mb-1">UF</label>
+                    <select name="uf" id="dt_nascimento" name="uf">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cidade" class="block text-sm text-gray-800 mb-1">Cidade</label>
+                    <input id="cidade" type="text" name="cidade"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.cidade }}
+                <div>
+                    <label for="endereco" class="block text-sm text-gray-800 mb-1">Endereco</label>
+                    <input id="endereco" type="text" name="endereco"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.endereco }}
+                <div>
+                    <label for="login" class="block text-sm text-gray-800 mb-1">Login</label>
+                    <input id="login" type="text" name="login"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out">
+                </div>
+                {{ error.login }}
+                <div>
+                    <label for="password" class="block text-sm text-gray-800 mb-1">Senha</label>
+                    <input id="password" type="password" name="password"
+                        class="w-full bg-gray-50 border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 rounded px-3 py-2 text-sm text-gray-800 placeholder-gray-300 focus:outline-none transition duration-200 ease-in-out mb-2">
+                </div>
+                {{ error.password }}
+                <div class="text-center mb-2">
+                    Já possui uma conta?
+                    <a href="{% url 'login' %}" class="text-gray-500 hover:underline">
+                        Login
+                    </a>
+                </div>
+                <div>
+                    <input type="submit" value="Cadastre-se" class="w-full text-sm bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded text-white shadow">
+                </div>
+                {% if sucesso %}
+                <div class="text-center mb-2">
+                    {{ sucesso }}
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
