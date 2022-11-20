@@ -3,7 +3,7 @@ from django.db import models
 class Cliente(models.Model):
     nome = models.CharField(max_length=30, verbose_name="Nome")
     email = models.EmailField(verbose_name="Email")
-    cpf = models.IntegerField(verbose_name="CPF")
+    cpf = models.CharField(max_length=11,verbose_name="CPF")
     dt_nascimento = models.DateField(verbose_name="Data de Nascimento")
     uf = models.CharField(max_length=2, verbose_name="UF")
     cidade  = models.CharField(max_length=60, verbose_name="Cidade")
@@ -26,7 +26,7 @@ class Usuario(models.Model):
 class Produto(models.Model):
     nome = models.CharField(max_length=60)
     descricao = models.TextField(max_length=60, blank=True, null=True)
-    preco = models.IntegerField()
+    preco = models.FloatField()
     quantidade = models.IntegerField()
     avaliacao = models.IntegerField()
     
