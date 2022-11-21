@@ -8,14 +8,13 @@ from datetime import date
 # Create your views here.
 def home(request):
 
-    produtos = {'produto':[]}
+    produtos = {}
 
     conn = db_connect()
     cursor = conn.cursor()
     cursor.execute(f"SELECT * FROM eletronicos_produto;")
-    
-    for produto in cursor:
-        produtos['produto'].append(produto)
+
+    produtos['produto'] = cursor.fetchall()
 
     return render(request, 'home/index.html', context=produtos)
 
@@ -102,8 +101,8 @@ def login(request):
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM eletronicos_cliente;")
             for clientes in cursor:
-
-                if login == clientes[1] and password == clientes[6]:
+                print(clientes)
+                if login == clientes[8] and password == clientes[9]:
                     context['message'] = 'Usuario logado.'
                     break
                 else:

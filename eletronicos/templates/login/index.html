@@ -3,8 +3,12 @@
 {% block content %}
 
 {% load static %}
-
-<div class="w-screen flex items-center justify-center bg-gray-100">
+<style>
+    .margin_login{
+        margin-bottom: 20%;
+    }
+</style>
+<div class="w-screen flex items-center justify-center bg-gray-100 margin_login">
     <div class="w-80">
         <h2 class="text-lg font-bold text-center mb-4">Login</h2>
         <form method="post" action="{% url 'login' %}">
