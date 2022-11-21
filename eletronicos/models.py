@@ -29,6 +29,7 @@ class Produto(models.Model):
     preco = models.FloatField()
     quantidade = models.IntegerField()
     avaliacao = models.IntegerField()
+    imagem = models.TextField()
     
     def __str__(self):
         return self.nome

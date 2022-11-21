@@ -19,7 +19,9 @@
                     class="underline decoration-sky-600">Nossos produtos disponíveis</span></h3>
 
             <div class="grid grid-cols-4 gap-4 mb-4">
-
+                {% for produto in produtos %}
+                   {{ produto }}
+                {% endfor %}
                 <div class="rounded-md shadow-lg">
                     <div class="max-w-sm rounded overflow-hidden shadow-lg pt-1 pl-2">
                         <div>

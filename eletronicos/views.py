@@ -7,8 +7,17 @@ from datetime import date
 
 # Create your views here.
 def home(request):
+
+    produtos = {'produto':[]}
+
+    conn = db_connect()
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT * FROM eletronicos_produto;")
     
-    return render(request, 'home/index.html')
+    for produto in cursor:
+        produtos['produto'].append(produto)
+
+    return render(request, 'home/index.html', context=produtos)
 
 def cadastro(request):
 
