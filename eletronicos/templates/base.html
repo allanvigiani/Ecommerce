@@ -13,26 +13,45 @@
 
     <header>
         <div>
-            <div class="container mx-auto h-24 flex items-center justify-between">
+            <div class="sticky top-0 h-24 flex items-center justify-between bg-sky-100 w-full pl-4 pr-4 mb-2">
                 <a href="/">
                     <div class="font-black">
                         LOGOTIPO
                     </div>
                 </a>
                 <div class="flex items-center">
-                    <h1 class="text-sky-600 text-xl">Sua Melhor Opção Eletrônicos <h1>
+                    <h1 class="text-xl">Sua melhor opção em eletrônicos. <h1>
                 </div>
                 <div>
                     <ul class="flex items-center">
                         <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600">Ajuda</a>
+                            <a href="" class="text-sm text-gray-800 hover:text-sky-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
+                                    </path>
+                                </svg>
+                            </a>
                         </li>
-                        <li>
-                            <a href="" class="text-sm text-gray-800 hover:text-sky-600 ml-2">Carrinho</a>
+                        <li class="ml-3">
+                            <a href="" class="text-sm text-gray-800 hover:text-sky-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </a>
                         </li>
-                        <li>
-                            <a href="{% url 'cadastro' %}"
-                                class="text-sm text-gray-800 hover:text-sky-600 ml-2">Cadastre-se</a>
+                        <li class="ml-3">
+                            <a href="{% url 'login' %}" class="text-sm text-gray-800 hover:text-sky-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
+                                    </path>
+                                </svg></a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +66,7 @@
     <!-- Footer -->
     <footer class="">
         <div class="">
-            <div class="container mx-auto h-24 flex items-center justify-between">
+            <div class="mx-auto h-24 flex items-center justify-between bg-sky-100 w-full pl-4 pr-4">
                 <div class="font-black">
                     LOGOTIPO
                 </div>
