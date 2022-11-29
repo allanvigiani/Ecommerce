@@ -18,6 +18,12 @@ def home(request):
 
     return render(request, 'home/index.html', context=produtos)
 
+def atendimento(request):
+    return render(request, 'atendimento/index.html')
+
+def carrinho(request):
+    return render(request, 'carrinho/index.html')
+
 def cadastro(request):
 
     context = {}
